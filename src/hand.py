@@ -21,12 +21,12 @@ class PocketHand(Hand):
 
     @property
     def cards(self):
-        return self.cards
+        return self._cards
 
     def draw(self, card):
         if not isinstance(card, Card):
             raise TypeError("Error: a card should be drawn")
-        self.cards.append(card)
+        self._cards.append(card)
 
 
 class CommunityHand(Hand):
@@ -35,9 +35,9 @@ class CommunityHand(Hand):
 
     @property
     def cards(self):
-        return self.cards
+        return self._cards
 
     def draw(self, card):
         if not isinstance(card, Card):
             raise TypeError("Error: a card should be drawn")
-        self.cards.append(card)
+        self._cards.append(card)
